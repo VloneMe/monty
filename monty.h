@@ -51,4 +51,11 @@ char **tokening(char *line, char *delim);
 int empty_line(char *line, char *delims);
 int execute(char **token, stack_t **stack, unsigned int line_num);
 
+
+/*### Monty Errors Checkers ###*/
+
+int monty_usage_error(int flag);
+int monty_open_error(char *filename);
+int monty_f_errors(int flag, unsigned int line_num);
+
 #endif /* __MONTY_H__ */
