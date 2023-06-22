@@ -54,8 +54,8 @@ int execute(char **token, stack_t **stack, unsigned int line_num);
 
 /*### Monty Errors Checkers ###*/
 
-int monty_usage_error(int flag);
+int monty_usage_error(int error_flag);
 int monty_open_error(char *filename);
-int monty_f_errors(int flag, unsigned int line_num);
+int monty_f_errors(int error_flag, unsigned int line_number);
 
 #endif /* __MONTY_H__ */
