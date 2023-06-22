@@ -42,7 +42,7 @@ typedef struct instruction_s
 
 /*### Monty Prototypes ###*/
 
-int monty_main(int ac, char **av);
+int main(int argc, char **argv);
 
 void monty_free_stack(stack_t **stack);
 
