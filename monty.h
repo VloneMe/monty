@@ -40,20 +40,30 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-/*### Monty Prototypes ###*/
-
+/*
+ * ### Monty Prototypes 
+ * ###*/
 int main(int argc, char **argv);
 
 void monty_free_stack(stack_t **stack);
 
-int monty_run(FILE *fd);
-char **tokening(char *line, char *delim);
-int empty_line(char *line, char *delims);
-int execute(char **token, stack_t **stack, unsigned int line_num);
+/*
+ * ### Monty Run File 
+ * ###*/
+int monty_run(FILE *file);
+char **tokenize_line(char *line, char *delimiters);
+int monty_empty_line(char *line, char *delimiters);
 
 
-/*### Monty Errors Checkers ###*/
+/* 
+ * ### Monty Pool 3 
+ * ###*/
+void monty_rotl(stack_t **stack, unsigned int line_number);
+void monty_rotr(stack_t **stack, unsigned int line_number);
 
+/*
+ * ### Monty Errors Checkers 
+ * ###*/
 int monty_usage_error(int error_flag);
 int monty_open_error(char *filename);
 int monty_f_errors(int error_flag, unsigned int line_number);
