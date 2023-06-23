@@ -6,7 +6,7 @@
  * @stack: Pointer to the doubly linked list representation of a stack
  * Return: void
  */
-void free_stack(stack_t **stack)
+void monty_free_stack(stack_t **stack)
 {
 	stack_t *current = *stack;
 	stack_t *tmp = NULL;
